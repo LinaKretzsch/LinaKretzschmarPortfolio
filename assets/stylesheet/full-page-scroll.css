@@ -471,3 +471,12 @@ img.icon{
   color: #FFDFF8;
   box-shadow: 0 0 30px #545B7B;
 }
+
+@media screen and (max-width: 850px) {
+#v0 {
+    z-index: 0;
+    position: fixed;
+    left: -100%;
+    height: 100%;
+}
+}

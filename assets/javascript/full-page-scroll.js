@@ -273,7 +273,10 @@
 				// });
 
 				if(position === 0){
+					vid.pause();
+				}
 
+				if(position === 1){
 					vid.play();
 					vid.ontimeupdate = function(){
 						if(vid.currentTime > 7.0)
@@ -281,13 +284,11 @@
 							vid.pause();
 						}
 					};
-
 					about.style.opacity = '0%';
 					about.style.backgroundColor= '#1c1e33';
-
 				}
 
-				if(position === 1){
+				if(position === 2){
 
 					about.style.transition = '2s';
 					about.style.opacity = '100%';
@@ -298,7 +299,7 @@
 					init();
 				}
 
-				if(position === 2){
+				if(position === 3){
 
 					projects.style.backgroundColor= "#7681a3";
 					projects.style.transition = '2s';
@@ -308,7 +309,7 @@
 					// init();
 
 				}
-				if(position === 3){
+				if(position === 4){
 
 					projects.style.backgroundColor= "#7681a3";
 					projects.style.transition = '2s';

@@ -257,9 +257,7 @@
 
 
 				let hero1 = document.getElementById('section1');
-				let hero1a = document.getElementById('section1a');
-				let hero1b = document.getElementById('section1b');
-				let hero1c = document.getElementById('section1c');
+				
 
 
 				let about = document.getElementById('section2');

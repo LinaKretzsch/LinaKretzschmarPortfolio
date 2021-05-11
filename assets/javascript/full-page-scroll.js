@@ -90,37 +90,7 @@
 		return this;
 	};
 
-	/**
-	 // * Build dots navigation
-	 // * @return {Object} this (fullScroll)
-	 */
-	// fullScroll.prototype.buildDots = function () {
-	// 	this.ul = document.createElement('ul');
-	//
-	//
-	// 	this.ul.className = this.updateClass(1, 'dots', this.ul.className);
-	// 	this.ul.className = this.updateClass(1, this.defaults.dotsPosition == 'right' ? 'dots-right' : 'dots-left', this.ul.className);
-	//
-	// 	var _self = this;
-	// 	var sections = this.defaults.sections;
-	//
-	// 	for (var i = 0; i < sections.length; i++) {
-	// 		var li = document.createElement('li');
-	// 		var a = document.createElement('a');
-	//
-	// 		a.setAttribute('href', '#' + i);
-	// 		li.appendChild(a);
-	// 		_self.ul.appendChild(li);
-	// 	}
-	//
-	// 	this.ul.childNodes[0].firstChild.className = this.updateClass(1, 'active', this.ul.childNodes[0].firstChild.className);
-	//
-	// 	if (this.defaults.displayDots) {
-	// 		document.body.appendChild(this.ul);
-	// 	}
-	//
-	// 	return this;
-	// };
+
 
 	/**
 	 * Add Events
@@ -257,9 +227,6 @@
 
 
 				let hero1 = document.getElementById('section1');
-				
-
-
 				let about = document.getElementById('section2');
 				let projects = document.getElementById('section3');
 				let contact = document.getElementById('section4');
@@ -270,11 +237,9 @@
 				// 	console.log('Video length ' + this.duration)
 				// });
 
-				if(position === 0){
-					vid.pause();
-				}
 
-				if(position === 1){
+
+				if(position === 0){
 					vid.play();
 					vid.ontimeupdate = function(){
 						if(vid.currentTime > 7.0)
@@ -286,7 +251,7 @@
 					about.style.backgroundColor= '#1c1e33';
 				}
 
-				if(position === 2){
+				if(position === 1){
 
 					about.style.transition = '2s';
 					about.style.opacity = '100%';
@@ -297,7 +262,7 @@
 					init();
 				}
 
-				if(position === 3){
+				if(position === 2){
 
 					projects.style.backgroundColor= "#7681a3";
 					projects.style.transition = '2s';
@@ -307,7 +272,7 @@
 					// init();
 
 				}
-				if(position === 4){
+				if(position === 3){
 
 					projects.style.backgroundColor= "#7681a3";
 					projects.style.transition = '2s';

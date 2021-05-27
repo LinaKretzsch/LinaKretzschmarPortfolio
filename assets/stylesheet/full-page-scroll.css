@@ -277,7 +277,7 @@ nav.projectCategories li a{
   justify-content: center;
   align-items: center;
   position: fixed;
-  align-self: flex-end;
+  /* align-self: flex-end; */
   z-index: 1;
 
 }
@@ -418,11 +418,23 @@ img {
 }
 
 img.icon{
+  /* align-self: center; */
   border-radius: 5%;
-  width: 30%;
-  height: auto;
+  /* width: 30%;
+  height: auto; */
   background-color: rgba(255, 223, 248, 0.3);
   transition: 2s;
+
+
+
+  flex: auto;
+  width: 30%;
+  /* display: none; */
+  /* justify-content: space-around; */
+  margin-left: 1%;
+
+  align-self: center;
+  margin-top: 2%;
 }
 
 .icon:hover {

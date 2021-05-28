@@ -70,34 +70,6 @@ function init(){
     showProjectsMockups();
   }, 1000);
 
-  // Set background Color back to blue in case it was changed
-
-  // var backgroundCol = $("#section3").css("backgroundColor");
-
-  // if(backgroundCol !== "rgba(118, 129, 163, 1)" || backgroundCol !== "rbga(28, 30, 51, 1)"){
-  //   $("#section3").css({background: "rgba(118, 129, 163, 1)"}, 200);
-  //   console.log(backgroundCol);
-  // }
-
-  // for(let i = 0; i< projectsDivArray.length; i++)
-  // {
-  //   $(projectsDivArray[i]).fadeOut(300);
-  // }
-
-  // setTimeout(() => {
-  //   $("#projectsHeader").css({opacity: 0, display: 'block'}).animate({opacity: 1}, 200);
-  //
-  //   for(let i = 0; i < projectsArray.length; i++){
-  //       $(projectsArray[i]).css({opacity: 0, display: 'flex'}).animate({opacity: 1}, 200);
-  //   }
-  //
-  // }, 600)
-
-
-  // if($("#closeDiv").css("opacity") !== 0){
-  //   console.log($("#closeDiv").css("opacity"));
-  //   $("#closeDiv").css({opacity: 1, display: 'block'}).animate({opacity: 0}, 200)
-  // }
 }
 
 function hideProject(){

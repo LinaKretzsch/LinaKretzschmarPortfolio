@@ -1,22 +1,21 @@
 
-var projectsArray = ["#ma", "#cpp", "#face", "#loop"];
-var projectsDivArray = ["#maDiv", "#cppDiv", "#faceDiv", "#loopDiv"];
+// Arrays storing the project mockup image ids and divs to show containing each project content when clicked upon
+var projectsArray = ["#ma", "#cpp", "#face", "#loop", "#sq", "#pul"];
+var projectsDivArray = ["#maDiv", "#cppDiv", "#faceDiv", "#loopDiv", "#sqDiv", "#pulDiv"];
 
+// Enable onclick functions for each project mockup to show project content
 $("#maMock").click({projectTitle: "ma", projectDiv: "#maDiv"}, showProject);
 $("#cppMock").click({projectTitle: "cpp", projectDiv: "#cppDiv"}, showProject);
 $("#faceMock").click({projectTitle: "face", projectDiv: "#faceDiv"}, showProject);
 $("#loopMock").click({projectTitle: "loop", projectDiv: "#loopDiv"}, showProject);
+$("#pulMock").click({projectTitle: "pul", projectDiv: "#pulDiv"}, showProject);
+$("#sqMock").click({projectTitle: "sq", projectDiv: "#sqDiv"}, showProject);
 
 
-
+//Enable onclick for close X on bottom page when project is opened
 $("#closeDiv").click(init);
 
-// Initialize project startup display with all project mockups visible
-// init({projectClicked: false});
-
-
-
-// Function to show project when clicked upon
+// Function to show project when clicked upon corresponding projectmockup
 function showProject(event) {
 
   $("#projectsHeader").css({opacity: 1, display: 'block'}).animate({opacity: 0}, 200);
@@ -36,8 +35,14 @@ function showProject(event) {
     case "loop":
       $("#section3").addClass('loopActive');
       break;
+    case "pul":
+      $("#section3").addClass('pulActive');
+      break;
+    case "sq":
+      $("#section3").addClass('sqActive');
+    default:
+      console.log("Invalid project name");
   }
-  // $("#section3").css({background: event.data.backgroundGradient}, 200);
 
   $("#projectImgs").css({justifyContent: "center"});
 
@@ -50,26 +55,18 @@ function showProject(event) {
   $(event.data.projectDiv).css({opacity: 0, display: 'flex',}).animate({opacity: 1}, 1000).delay(1000);
 };
 
-// function closeProject(){
-//
-//
-//   init();
-//   // $("#section3").css({backgroundColor: "rgba(118, 129, 163, 1)"}, 200);
-//
-// }
-
 function init(){
-
   $("#section3").removeClass('maActive');
   $("#section3").removeClass('cppActive');
   $("#section3").removeClass('faceActive');
   $("#section3").removeClass('loopActive');
+  $("#section3").removeClass('pulActive');
+  $("#section3").removeClass('sqActive');
 
   hideProject();
   setTimeout( () => {
     showProjectsMockups();
   }, 1000);
-
 }
 
 function hideProject(){
@@ -83,26 +80,9 @@ function hideProject(){
 }
 
 function showProjectsMockups(){
-    $("#projectsHeader").css({opacity: 0, display: 'block'}).animate({opacity: 1}, 200);
+    $("#projectsHeader").css({opacity: 0, display: 'flex'}).animate({opacity: 1}, 200);
 
     for(let i = 0; i < projectsArray.length; i++){
         $(projectsArray[i]).css({opacity: 0, display: 'flex'}).animate({opacity: 1}, 200);
     }
 }
-
-function scrollingUp(){
-	 var lastScrollTop = 0, delta = 5;
-	 $(window).scroll(function(){
-		 var nowScrollTop = $(this).scrollTop();
-		 if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
-		 	if (nowScrollTop > lastScrollTop){
-          return false;
-  		 		// return true;
-		 	} else {
-        return true;
-
-			}
-		 lastScrollTop = nowScrollTop;
-		 }
-	 });
- }

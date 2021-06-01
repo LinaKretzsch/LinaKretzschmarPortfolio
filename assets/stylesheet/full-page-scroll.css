@@ -75,7 +75,6 @@ h1 {
 	color: #FFDFF8;
 	letter-spacing: 5px;
 	font-size: 40px;
-  /* z-index: 2; */
   opacity: 80%;
 }
 
@@ -85,7 +84,7 @@ h1 {
 
 
 .sectionHeader {
-  align-self: flex-start;
+  /* align-self: flex-start; */
   justify-content: flex-start;
   opacity: 100%;
   text-align: bottom left;
@@ -100,9 +99,9 @@ h1 {
 }
 
 #contactHeader {
-  padding-top: 18vh;
+  padding-top: 10vh;
   padding-left: 20vw;
-  height: 18vh;
+  height: 10vh;
   width: 90vw;
 }
 
@@ -113,8 +112,8 @@ h1 {
 
 /* Attributes that all sections share */
 section{
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   /* z-index: 0; */
 }
 
@@ -128,62 +127,76 @@ section{
   opacity: 100%;
 }
 
+/* Transitions added to all projects when clicked, so background will change smoothly */
+.maActive, .cppActive, .faceActive, .loopActive, .pulActive, .sqActive {
+  transition: 1s;
+}
+
 /* Background of Meme Aesthetics project once clicked */
 .maActive {
   background: linear-gradient(11deg, rgba(187,150,151,1) 0%, rgba(140,139,160,1) 100%);
-  transition: 1s;
 }
 
 /* Background of CPP project once clicked */
 .cppActive {
   background: linear-gradient(25deg, rgba(104,156,189,1) 0%, rgba(97,126,174,1) 100%);
-  transition: 1s;
 }
 
 /* Background of animated face project once clicked */
 .faceActive {
   background: linear-gradient(47deg, rgba(169,145,144,1) 0%, rgba(94,78,91,1) 76%);
-  transition: 1s;
 }
 
 /* Background of animated loop project once clicked */
 .loopActive {
   background: linear-gradient(47deg, rgba(172,168,174,1) 0%, rgba(112,119,137,1) 76%);
-  transition: 1s;
+}
+
+/* Background of animated pulmonem project once clicked */
+.pulActive {
+  background: linear-gradient(47deg, rgba(57,96,118,1) 0%, rgba(55,69,90,1) 76%);
+}
+
+/* Background of animated sketchquisite once clicked */
+.sqActive {
+  background: linear-gradient(47deg, rgba(143,159,173,1) 0%, rgba(79,90,106,1) 76%);
 }
 
 .flexCol {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  /* justify-content: center; */
 }
 
-#maDiv, #cppDiv, #faceDiv, #loopDiv{
+#maDiv, #cppDiv, #faceDiv, #loopDiv, #pulDiv, #sqDiv, #sqDiv{
   flex: auto;
   width: 100%;
   display: none;
   justify-content: space-around;
   margin-left: 1%;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 2%;
-  transform: translateY(-25vh);
   align-self: center;
+  transform: translateY(-10vh);
 }
 
 #loopDiv {
   margin-top: 0%;
 }
 
-#maDiv #maImageContainer, #cppDiv #cppImageContainer, #faceDiv #faceImageContainer, #loopDiv #loopImageContainer{
+#maDiv #maImageContainer, #cppDiv #cppImageContainer, #faceDiv #faceImageContainer,
+#loopDiv #loopImageContainer, #sqDiv #sqImageContainer, #pulDiv #pulImageContainer{
   width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 5%;
+  /* margin-left: 5%; */
 }
 
-#maDiv #maText , #cppDiv #cppText, #faceDiv #faceText, #loopDiv #loopText{
+#maDiv #maText , #cppDiv #cppText, #faceDiv #faceText, #loopDiv #loopText,
+#sqDiv #sqText, #pulDiv #sqText{
   width: 35%;
   margin-left: none;
   margin-right: 10%;
@@ -191,12 +204,12 @@ section{
   resize: both;
 }
 
-#maDiv h1, #cppDiv h1, #faceDiv h1, #loopDiv h1{
+#maDiv h1, #cppDiv h1, #faceDiv h1, #loopDiv h1, #sqDiv h1, #pulDiv h1{
   margin-top: 0;
-  padding-bottom: 15%;
+  /* padding-bottom: 15%; */
 }
 
-#maDiv a, #cppDiv a{
+#maDiv a, #cppDiv a, #sqDiv a, #pul a{
   font-weight: bold;
 }
 
@@ -214,11 +227,10 @@ section{
   outline: none;
 }
 
+
 .textContainer {
-	/* left: 50%;*/
 	width: 40%;
   resize: both;
-	/* transform: translate(-50%, -50%); */
 }
 
  p{
@@ -236,52 +248,20 @@ a {
 }
 
 .projectsContainer {
-  height: 100%;
-  width: 100%;
+  /* margin-left: 5vw; */
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-nav.projectCategories {
-  position: flex;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-shrink: 2;
-  flex-wrap: wrap;
-  transform: rotate(-90deg);
-  width: 50%;
-  position:fixed;
-  justify-content: flex-start;
-}
-
-nav.projectCategories li {
-  padding: 8%;
-
-}
-
-nav.projectCategories li a{
-  font-family: 'Nunito', sans-serif;
-  color: #1c1e33;
-  font-weight: bold;
-  letter-spacing: .5px;
-  text-decoration: none;
-  /* position: fixed; */
-  display: flex;
-  font-size: 10%;
-
+  justify-content: center;
+  height: 65vh;
 }
 
 #projectImgs {
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10vw;
+  justify-content: flex-start !important;
   align-items: flex-start;
-  height: 40vh;
+  height: 100vh;
   width: 100vw;
-
 }
 
 #contactImgs {
@@ -295,11 +275,11 @@ nav.projectCategories li a{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-content: flex-start;
 }
 
-
-
-#ma img:hover, #cpp img:hover, #face img:hover, #loop img:hover {
+/* Hover effect for each mock image */
+#ma img:hover, #cpp img:hover, #face img:hover, #loop img:hover, #pul img:hover, #sq img:hover {
   filter: contrast(130%);
   width: 90%;
 }
@@ -308,24 +288,22 @@ nav.projectCategories li a:hover{
   font-weight: 200;
 }
 
-#ma, #cpp, #face, #loop{
-  width: 21%;
+#ma, #cpp, #face, #loop, #pul, #sq{
+  /* width: 15%; */
   margin: 0;
   display: flex;
   padding: 0.0%;
   transition: 2.5s;
   flex-wrap: wrap;
-  min-width: 300px;
-  max-height: 40vh;
+  min-width: 10vw;
+  max-width: 30vh;
+  align-self: flex-start;
+  display: flex;
 }
 
-
-
 img {
-    width: 100%;
-    margin: 0;
-    transition:1s;
-    /* padding: 2%; */
+width: 100%;
+transition: 2s;
 }
 
 #v0 {
@@ -353,51 +331,6 @@ img {
 }
 
 
-.projectCategories {
-  position: fixed;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-shrink: 2;
-  flex-wrap: wrap;
-  transform: translateX(-3050%);
-  width: 1.5%;
-  height: 35%;
-  justify-content: flex-start;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-}
-
-.projectCategories li {
-  /* transform:rotate(-90deg); */
-}
-
-.projectCategories li a{
-  font-family: 'Nunito', sans-serif;
-  color: #1c1e33;
-  font-weight: bold;
-  letter-spacing: 1%;
-  text-decoration: none;
-  display: flex;
-  font-size: 90%;
-  transition: 1s;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: none !important;
-}
-
-.projectCategories li a.active{
-  background-color: rgba(255, 223, 248, 0.5);
-}
-
-.projectCategories li a:hover{
-  border-left: 2px blue;
-  background-color: rgba(255, 223, 248, 0.3);
-}
-
 #closeDiv {
   margin-bottom: 1%;
   position: relative;
@@ -420,23 +353,16 @@ img {
 
 #closeDiv:hover{
   background-color: rgba(255, 223, 248, 0.5) !important;
-  /* color: #1c1e33; */
 }
 
 img.icon{
   border-radius: 5%;
   background-color: rgba(255, 223, 248, 0.3);
   transition: 2s;
-  /* flex: auto; */
   width: 6vw;
-  /* margin-left: 5vw;
   margin-right: 5vw; */
-
-  /* margin-left: 1%; */
   align-self: center;
-  /* margin-top: 2%; */
 }
-
 
 
 .icon:hover {

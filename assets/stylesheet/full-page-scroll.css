@@ -93,7 +93,7 @@ h1 {
 
 #projectsHeader {
   padding-top: 15vh;
-  padding-left: 6vw;
+  padding-left: 10vw;
   height: 7vh;
   width: 90vw;
 }
@@ -196,7 +196,7 @@ section{
 }
 
 #maDiv #maText , #cppDiv #cppText, #faceDiv #faceText, #loopDiv #loopText,
-#sqDiv #sqText, #pulDiv #sqText{
+#sqDiv #sqText, #pulDiv #pulText{
   width: 35%;
   margin-left: none;
   margin-right: 10%;
@@ -237,7 +237,7 @@ section{
 	font-family: 'Nunito', sans-serif;
 	color: #FFDFF8;
 	font-weight: lighter;
-	font-size: 110%;
+	font-size: 18px;
 	text-align: justify;
 }
 
@@ -258,6 +258,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin-left: 10vw;
+  margin-right: 5vw;
   justify-content: flex-start !important;
   align-items: flex-start;
   height: 100vh;
@@ -303,7 +304,7 @@ nav.projectCategories li a:hover{
 
 img {
 width: 100%;
-transition: 2s;
+transition: 1s;
 }
 
 #v0 {
@@ -388,4 +389,36 @@ img.icon{
 #set-height {
   justify-content: center;
 }
+
+}
+
+@media screen and (max-width: 1500px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 9px;
+  }
 }

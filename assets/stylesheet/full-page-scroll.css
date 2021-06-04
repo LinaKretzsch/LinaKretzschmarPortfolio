@@ -92,7 +92,7 @@ h1 {
 }
 
 #projectsHeader {
-  padding-top: 15vh;
+  padding-top: 10vh;
   padding-left: 10vw;
   height: 7vh;
   width: 90vw;
@@ -100,7 +100,7 @@ h1 {
 
 #contactHeader {
   padding-top: 10vh;
-  padding-left: 20vw;
+  padding-left: 10vw;
   height: 10vh;
   width: 90vw;
 }
@@ -125,6 +125,10 @@ section{
   align-items: center;
   background-color: rbga(28, 30, 51, 1);
   opacity: 100%;
+}
+
+#section4 {
+  justify-content: center;
 }
 
 /* Transitions added to all projects when clicked, so background will change smoothly */
@@ -285,9 +289,6 @@ a {
   width: 90%;
 }
 
-nav.projectCategories li a:hover{
-  font-weight: 200;
-}
 
 #ma, #cpp, #face, #loop, #pul, #sq{
   /* width: 15%; */
@@ -360,9 +361,10 @@ img.icon{
   border-radius: 5%;
   background-color: rgba(255, 223, 248, 0.3);
   transition: 2s;
-  width: 6vw;
-  margin-right: 5vw; */
+  width: 4.5vw;
+  margin-right: 8vw;
   align-self: center;
+  min-width: 50px;
 }
 
 

@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;700&family=Zilla+Slab+Highlight&display=swap');
 
 body, html {
@@ -13,7 +10,6 @@ body, html {
   height: 100%;
   overflow: hidden;
 }
-
 
 .scroll-container {
   width: 100%;
@@ -30,12 +26,6 @@ nav {
   min-height: 8vh;
 }
 
-#heroVideo {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  z-index: 0;
-}
 
 .navBar {
   width: 5%;
@@ -72,240 +62,36 @@ nav {
 h1 {
   font-family: 'Work Sans', sans-serif;
   font-weight: lighter;
-	color: #FFDFF8;
-	letter-spacing: 5px;
-	font-size: 40px;
+  color: #FFDFF8;
+  letter-spacing: 5px;
+  font-size: 40px;
   opacity: 80%;
 }
 
-#aboutHeader {
-  transform: translateY(-180%);
-}
-
-
-.sectionHeader {
-  /* align-self: flex-start; */
-  justify-content: flex-start;
-  opacity: 100%;
-  text-align: bottom left;
-  align-self: center;
-}
-
-#projectsHeader {
-  padding-top: 10vh;
-  padding-left: 10vw;
-  height: 7vh;
-  width: 90vw;
-}
-
-#contactHeader {
-  padding-top: 10vh;
-  padding-left: 10vw;
-  height: 10vh;
-  width: 90vw;
-}
-
-/* Section containing the hero header video */
-#section1{
-  display: flex;
-}
-
-/* Attributes that all sections share */
-section{
-  width: 100vw;
-  height: 100vh;
-  /* z-index: 0; */
-}
-
-/* About section */
-#section2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rbga(28, 30, 51, 1);
-  opacity: 100%;
-}
-
-#section4 {
-  justify-content: center;
-}
-
-/* Transitions added to all projects when clicked, so background will change smoothly */
-.maActive, .cppActive, .faceActive, .loopActive, .pulActive, .sqActive {
-  transition: 1s;
-}
-
-/* Background of Meme Aesthetics project once clicked */
-.maActive {
-  background: linear-gradient(11deg, rgba(187,150,151,1) 0%, rgba(140,139,160,1) 100%);
-}
-
-/* Background of CPP project once clicked */
-.cppActive {
-  background: linear-gradient(25deg, rgba(104,156,189,1) 0%, rgba(97,126,174,1) 100%);
-}
-
-/* Background of animated face project once clicked */
-.faceActive {
-  background: linear-gradient(47deg, rgba(169,145,144,1) 0%, rgba(94,78,91,1) 76%);
-}
-
-/* Background of animated loop project once clicked */
-.loopActive {
-  background: linear-gradient(47deg, rgba(172,168,174,1) 0%, rgba(112,119,137,1) 76%);
-}
-
-/* Background of animated pulmonem project once clicked */
-.pulActive {
-  background: linear-gradient(47deg, rgba(57,96,118,1) 0%, rgba(55,69,90,1) 76%);
-}
-
-/* Background of animated sketchquisite once clicked */
-.sqActive {
-  background: linear-gradient(47deg, rgba(143,159,173,1) 0%, rgba(79,90,106,1) 76%);
-}
-
-.flexCol {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  /* justify-content: center; */
-}
-
-#maDiv, #cppDiv, #faceDiv, #loopDiv, #pulDiv, #sqDiv, #sqDiv{
-  flex: auto;
-  width: 100%;
-  display: none;
-  justify-content: space-around;
-  margin-left: 1%;
-  align-items: flex-start;
-  margin-top: 2%;
-  align-self: center;
-  transform: translateY(-10vh);
-}
-
-#loopDiv {
-  margin-top: 0%;
-}
-
-#maDiv #maImageContainer, #cppDiv #cppImageContainer, #faceDiv #faceImageContainer,
-#loopDiv #loopImageContainer, #sqDiv #sqImageContainer, #pulDiv #pulImageContainer{
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* margin-left: 5%; */
-}
-
-#maDiv #maText , #cppDiv #cppText, #faceDiv #faceText, #loopDiv #loopText,
-#sqDiv #sqText, #pulDiv #pulText{
-  width: 35%;
-  margin-left: none;
-  margin-right: 10%;
-  align-self: flex-start;
-  resize: both;
-}
-
-#maDiv h1, #cppDiv h1, #faceDiv h1, #loopDiv h1, #sqDiv h1, #pulDiv h1{
-  margin-top: 0;
-  /* padding-bottom: 15%; */
-}
-
-#maDiv a, #cppDiv a, #sqDiv a, #pul a{
-  font-weight: bold;
-}
-
-#faceDiv video#faceVideo{
-  width: 80%;
-  box-shadow: 10px 20px 40px #463D52;
-}
-
-#loopDiv video#loopVideo{
-  width: 80%;
-  box-shadow: 40px 30px 50px #546075;
-}
-
-#faceVideo:focus, #loopVideo:focus {
-  outline: none;
-}
-
-
-.textContainer {
-	width: 40%;
-  resize: both;
-}
-
- p{
-	font-family: 'Nunito', sans-serif;
-	color: #FFDFF8;
-	font-weight: lighter;
-	font-size: 18px;
-	text-align: justify;
+p {
+  font-family: 'Nunito', sans-serif;
+  color: #FFDFF8;
+  font-weight: lighter;
+  font-size: 18px;
+  text-align: justify;
 }
 
 a {
   text-decoration: none;
   color: #FFDFF8;
-
-}
-
-.projectsContainer {
-  /* margin-left: 5vw; */
-  display: flex;
-  justify-content: center;
-  height: 65vh;
-}
-
-#projectImgs {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 10vw;
-  margin-right: 5vw;
-  justify-content: flex-start !important;
-  align-items: flex-start;
-  height: 100vh;
-  width: 100vw;
-}
-
-#contactImgs {
-  justify-content: space-evenly;
-  align-items: flex-start;
-  height: 30vh;
-  width: 100vw;
-}
-
-.flexImageRow {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: flex-start;
-}
-
-/* Hover effect for each mock image */
-#ma img:hover, #cpp img:hover, #face img:hover, #loop img:hover, #pul img:hover, #sq img:hover {
-  filter: contrast(130%);
-  width: 90%;
-}
-
-
-#ma, #cpp, #face, #loop, #pul, #sq{
-  /* width: 15%; */
-  margin: 0;
-  display: flex;
-  padding: 0.0%;
-  transition: 2.5s;
-  flex-wrap: wrap;
-  min-width: 10vw;
-  max-width: 30vh;
-  align-self: flex-start;
-  display: flex;
 }
 
 img {
-width: 100%;
-transition: 1s;
+  width: 100%;
+  transition: 1s;
+}
+
+/* Properties for background video */
+#heroVideo {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: 0;
 }
 
 #v0 {
@@ -326,13 +112,236 @@ transition: 1s;
   z-index: 0;
   width: 90%;
   height: 90%;
-  /* display: flex; */
+  display: flex;
   resize: both;
   justify-content: center;
   align-items: center;
 }
 
+/* Class to be added to any section displayed as flex container */
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
 
+/* Common header properties */
+.sectionHeader {
+  justify-content: flex-start;
+  opacity: 100%;
+  text-align: bottom left;
+  align-self: center;
+}
+
+/* Header of about section */
+#aboutHeader {
+  transform: translateY(-180%);
+}
+
+/* Header of projects section */
+#projectsHeader {
+  padding-top: 10vh;
+  padding-left: 10vw;
+  height: 7vh;
+  width: 90vw;
+}
+
+/* Header of about section */
+#contactHeader {
+  padding-top: 10vh;
+  padding-left: 10vw;
+  height: 10vh;
+  width: 90vw;
+}
+
+/* Section containing the hero header video */
+#section1 {
+  display: flex;
+}
+
+/* Attributes that all sections share */
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* About section */
+#section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rbga(28, 30, 51, 1);
+  opacity: 100%;
+}
+
+/* Contact section */
+#section4 {
+  justify-content: center;
+}
+
+/* Transitions added to all projects when clicked, so background will change smoothly */
+.maActive, .cppActive, .faceActive, .loopActive, .pulActive, .sqActive {
+  transition: 1s;
+}
+
+/* Background of Meme Aesthetics project once clicked */
+.maActive {
+  background: linear-gradient(11deg, rgba(187, 150, 151, 1) 0%, rgba(140, 139, 160, 1) 100%);
+}
+
+/* Background of CPP project once clicked */
+.cppActive {
+  background: linear-gradient(25deg, rgba(104, 156, 189, 1) 0%, rgba(97, 126, 174, 1) 100%);
+}
+
+/* Background of animated face project once clicked */
+.faceActive {
+  background: linear-gradient(47deg, rgba(169, 145, 144, 1) 0%, rgba(94, 78, 91, 1) 76%);
+}
+
+/* Background of animated loop project once clicked */
+.loopActive {
+  background: linear-gradient(47deg, rgba(172, 168, 174, 1) 0%, rgba(112, 119, 137, 1) 76%);
+}
+
+/* Background of animated pulmonem project once clicked */
+.pulActive {
+  background: linear-gradient(47deg, rgba(57, 96, 118, 1) 0%, rgba(55, 69, 90, 1) 76%);
+}
+
+/* Background of animated sketchquisite once clicked */
+.sqActive {
+  background: linear-gradient(47deg, rgba(143, 159, 173, 1) 0%, rgba(79, 90, 106, 1) 76%);
+}
+
+/* Divs containing project content and visible when project mockup images are clicked */
+#maDiv, #cppDiv, #faceDiv, #loopDiv, #pulDiv, #sqDiv, #sqDiv {
+  flex: auto;
+  width: 100%;
+  display: none;
+  justify-content: space-around;
+  margin-left: 1%;
+  align-items: flex-start;
+  margin-top: 2%;
+  align-self: center;
+  transform: translateY(-10vh);
+}
+
+/* Div with slightly adjusted property */
+#loopDiv {
+  margin-top: 0%;
+}
+
+/* Image container to show case project image once project is opened */
+#maImageContainer, #cppDiv #cppImageContainer, #faceDiv #faceImageContainer,
+#loopDiv #loopImageContainer, #sqDiv #sqImageContainer, #pulDiv #pulImageContainer {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Text describing the project itself, visible when project mockup is clicked*/
+#maDiv #maText, #cppDiv #cppText, #faceDiv #faceText, #loopDiv #loopText,
+#sqDiv #sqText, #pulDiv #pulText {
+  width: 35%;
+  margin-left: none;
+  margin-right: 10%;
+  align-self: flex-start;
+  resize: both;
+}
+
+/* Header of project once opened */
+#maDiv h1, #cppDiv h1, #faceDiv h1, #loopDiv h1, #sqDiv h1, #pulDiv h1 {
+  margin-top: 0;
+}
+
+/* links within project */
+#maDiv a, #cppDiv a, #sqDiv a, #pul a {
+  font-weight: bold;
+}
+
+/* Video properties for the Face animation project */
+#faceDiv video#faceVideo {
+  width: 80%;
+  box-shadow: 10px 20px 40px #463D52;
+}
+
+/* Video properties for the Loop animation project */
+#loopDiv video#loopVideo {
+  width: 80%;
+  box-shadow: 40px 30px 50px #546075;
+}
+
+/* Removing outline from Face animation project */
+#faceVideo:focus, #loopVideo:focus {
+  outline: none;
+}
+
+/* Adjusting text container */
+.textContainer {
+  width: 40%;
+  resize: both;
+}
+
+/* Container, containing project mockups and project divs */
+.projectsContainer {
+  /* margin-left: 5vw; */
+  display: flex;
+  justify-content: center;
+  height: 65vh;
+}
+
+/* Project Mockup properties */
+#projectImgs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10vw;
+  margin-right: 5vw;
+  justify-content: flex-start !important;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Icons of contact section */
+#contactImgs {
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 30vh;
+  width: 100vw;
+}
+
+/* Flex properties for image row */
+.flexImageRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* Hover effect for each mock image */
+#ma img:hover, #cpp img:hover, #face img:hover, #loop img:hover, #pul img:hover, #sq img:hover {
+  filter: contrast(130%);
+  width: 90%;
+}
+
+/* Project mockups */
+#ma, #cpp, #face, #loop, #pul, #sq {
+  margin: 0;
+  display: flex;
+  padding: 0.0%;
+  transition: 2.5s;
+  flex-wrap: wrap;
+  min-width: 10vw;
+  max-width: 30vh;
+  align-self: flex-start;
+  display: flex;
+}
+
+/* Div containing X to close a project once opened */
 #closeDiv {
   margin-bottom: 1%;
   position: relative;
@@ -353,11 +362,13 @@ transition: 1s;
   align-self: center;
 }
 
-#closeDiv:hover{
+/* Hover effect for close X */
+#closeDiv:hover {
   background-color: rgba(255, 223, 248, 0.5) !important;
 }
 
-img.icon{
+/* Icon properties for contact section */
+img.icon {
   border-radius: 5%;
   background-color: rgba(255, 223, 248, 0.3);
   transition: 2s;
@@ -367,31 +378,33 @@ img.icon{
   min-width: 50px;
 }
 
-
+/* Icon hover effect */
 .icon:hover {
   background-color: #FFDFF8;
   text-shadow: 0 0 30px #545B7B;
   box-shadow: 0 0 30px #FFDFF8;
 }
 
+/* Glowing property */
 .glow {
   color: #FFDFF8;
   box-shadow: 0 0 30px #545B7B;
 }
 
+/* Media Queries */
+
 @media screen and (max-width: 2536px) {
-#v0 {
+  #v0 {
     z-index: 0;
     align-self: center;
     right: 50%;
     top: 75%;
     height: 150% !important;
-}
+  }
 
-#set-height {
-  justify-content: center;
-}
-
+  #set-height {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -403,7 +416,6 @@ img.icon{
     font-size: 15px;
   }
 }
-
 
 @media screen and (max-width: 1000px) {
   h1 {

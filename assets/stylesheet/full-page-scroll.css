@@ -335,7 +335,7 @@ section {
   padding: 0.0%;
   transition: 2.5s;
   flex-wrap: wrap;
-  min-width: 10vw;
+  /* min-width: 10vw; */
   max-width: 30vh;
   align-self: flex-start;
   display: flex;
@@ -415,6 +415,7 @@ img.icon {
   p {
     font-size: 15px;
   }
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -425,6 +426,10 @@ img.icon {
   p {
     font-size: 12px;
   }
+
+  #ma, #sq, #face, #loop, #cpp, #pul {
+    width: 28vw;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -434,5 +439,9 @@ img.icon {
 
   p {
     font-size: 9px;
+  }
+
+  #ma, #sq, #face, #loop, #cpp, #pul {
+    width: 35vw;
   }
 }

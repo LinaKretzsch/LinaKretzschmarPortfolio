@@ -241,12 +241,13 @@
 
 				if(position === 0){
 					vid.play();
-					vid.ontimeupdate = function(){
-						if(vid.currentTime > 7.0)
-						{
-							vid.pause();
-						}
-					};
+					// vid.ontimeupdate = function(){
+					// 	if(vid.currentTime > 7.0)
+					// 	{
+					// 		vid.pause();
+					// 	}
+					// };
+					// vid.play();
 					about.style.opacity = '0%';
 					about.style.backgroundColor= '#1c1e33';
 				}
@@ -257,7 +258,7 @@
 					about.style.opacity = '100%';
 					about.style.backgroundColor= "#1c1e33";
 					projects.style.backgroundColor= "#1c1e33";
-					vid.currentTime = 0;
+					// vid.currentTime = 0;
 					vid.pause();
 					init();
 				}

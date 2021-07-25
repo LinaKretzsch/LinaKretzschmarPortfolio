@@ -445,3 +445,35 @@ img.icon {
     width: 35vw;
   }
 }
+
+@media (orientation: portrait){
+  #maDiv, #cppDiv, #pulDiv, #faceDiv , #loopDiv, #sqDiv {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: translateY(0vh);
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  #maImageContainer, #sqImageContainer, #cppImageContainer, #pulImageContainer, #loopImageContainer, #faceImageContainer {
+    width: 65%;
+  }
+
+  #maDiv #maText, #sqDiv #sqText, #cppDiv #cppText, #pulDiv #pulText, #loopDiv #loopText, #sqDiv #sqText, #faceDiv #faceText {
+    padding: 5%;
+    margin-right: 0;
+    width: 70%;
+    text-align: center;
+  }
+
+  #closeDiv {
+    margin-top: 10%;
+  }
+
+  body {
+    background-color: #6E79A2;
+  }
+}

@@ -17,45 +17,54 @@ $("#closeDiv").click(init);
 
 // Function to show project when clicked upon corresponding projectmockup
 function showProject(event) {
+  $("#projectsHeader")
+    .css({ visibility: 1, display: "block" })
+    .animate({ opacity: 0 }, 200);
 
-  $("#projectsHeader").css({opacity: 1, display: 'block'}).animate({opacity: 0}, 200);
+  // $("#closeDiv").fadeToggle();
+  // $("#closeDiv").css({visibility: 0}).animate({visibility: '100%'}, 200);
+  $("#closeDiv").fadeIn(200);
 
-  $("#closeDiv").css({opacity: 0, display: 'block'}).animate({opacity: 1}, 200);
 
-  switch(event.data.projectTitle){
+  switch (event.data.projectTitle) {
     case "ma":
-      $("#section3").addClass('maActive');
+      $("#section3").addClass("maActive");
       break;
     case "cpp":
-      $("#section3").addClass('cppActive');
+      $("#section3").addClass("cppActive");
       break;
     case "face":
-      $("#section3").addClass('faceActive');
+      $("#section3").addClass("faceActive");
       break;
     case "loop":
-      $("#section3").addClass('loopActive');
+      $("#section3").addClass("loopActive");
       break;
     case "pul":
-      $("#section3").addClass('pulActive');
+      $("#section3").addClass("pulActive");
       break;
     case "sq":
-      $("#section3").addClass('sqActive');
+      $("#section3").addClass("sqActive");
     default:
       console.log("Invalid project name");
   }
 
-  $("#projectImgs").css({justifyContent: "center"});
+  $("#projectImgs").css({ justifyContent: "center" });
 
-  for(let i = 0; i < projectsArray.length; i++)
-  {
-    if($(projectsArray[i]).is(":visible")){
-      $(projectsArray[i]).css({opacity: 1, display: 'none'}).animate({opacity: 0}, 200);
+  for (let i = 0; i < projectsArray.length; i++) {
+    if ($(projectsArray[i]).is(":visible")) {
+      $(projectsArray[i])
+        .css({ opacity: 1, display: "none" })
+        .animate({ opacity: 0 }, 200);
     }
   }
-  $(event.data.projectDiv).css({opacity: 0, display: 'flex',}).animate({opacity: 1}, 1000).delay(1000);
+  $(event.data.projectDiv)
+    .css({ opacity: 0, display: "flex" })
+    .animate({ opacity: 1 }, 1000)
+    .delay(1000);
 };
 
 function init(){
+
   $("#section3").removeClass('maActive');
   $("#section3").removeClass('cppActive');
   $("#section3").removeClass('faceActive');
@@ -63,20 +72,21 @@ function init(){
   $("#section3").removeClass('pulActive');
   $("#section3").removeClass('sqActive');
 
-  hideProject();
+  hideOpenProject();
   setTimeout( () => {
     showProjectsMockups();
   }, 1000);
 }
 
-function hideProject(){
+function hideOpenProject(){
   for(let i = 0; i< projectsDivArray.length; i++)
   {
     $(projectsDivArray[i]).fadeOut(200);
   }
-  if($("#closeDiv").css("opacity") !== 0){
-    $("#closeDiv").css({opacity: 1, display: 'block'}).animate({opacity: 0}, 200)
-  }
+  // if($("#closeDiv").css("visibility") === 'visible'){
+  //   $("#closeDiv").css({visibility: 'visible'}).animate({visibility: 'hidden'}, 200)
+  // }
+  $("#closeDiv").fadeOut(100);
 }
 
 function showProjectsMockups(){

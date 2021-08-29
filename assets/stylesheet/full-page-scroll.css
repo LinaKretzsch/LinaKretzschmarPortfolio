@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;700&family=Zilla+Slab+Highlight&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;700&family=Zilla+Slab+Highlight&display=swap");
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -26,7 +27,6 @@ nav {
   min-height: 8vh;
 }
 
-
 .navBar {
   width: 5%;
   height: 100%;
@@ -47,30 +47,31 @@ nav {
   text-decoration: none;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  font-family: 'Barlow Condensed', sans-serif;
-  color: #FFDFF8;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #ffdff8;
   font-weight: bold;
   transition: 2s;
 }
 
-.navBar li a:hover, a:active {
+.navBar li a:hover,
+a:active {
   color: #ffa6e3;
   text-shadow: 0 0 10px #fefcff;
   font-weight: bold;
 }
 
 h1 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: lighter;
-  color: #FFDFF8;
+  color: #ffdff8;
   letter-spacing: 5px;
   font-size: 40px;
   opacity: 80%;
 }
 
 p {
-  font-family: 'Nunito', sans-serif;
-  color: #FFDFF8;
+  font-family: "Nunito", sans-serif;
+  color: #ffdff8;
   font-weight: lighter;
   font-size: 18px;
   text-align: justify;
@@ -78,7 +79,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #FFDFF8;
+  color: #ffdff8;
 }
 
 img {
@@ -122,8 +123,6 @@ img {
 .flexCol {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
 }
 
 /* Common header properties */
@@ -131,7 +130,8 @@ img {
   justify-content: flex-start;
   opacity: 100%;
   text-align: bottom left;
-  align-self: center;
+  /* align-self: center; */
+  display: block;
 }
 
 /* Header of about section */
@@ -145,6 +145,7 @@ img {
   padding-left: 10vw;
   height: 7vh;
   width: 90vw;
+  /* display: block; */
 }
 
 /* Header of about section */
@@ -182,51 +183,78 @@ section {
 }
 
 /* Transitions added to all projects when clicked, so background will change smoothly */
-.maActive, .cppActive, .faceActive, .loopActive, .pulActive, .sqActive {
+.maActive,
+.cppActive,
+.faceActive,
+.loopActive,
+.pulActive,
+.sqActive {
   transition: 1s;
 }
 
 /* Background of Meme Aesthetics project once clicked */
 .maActive {
-  background: linear-gradient(11deg, rgba(187, 150, 151, 1) 0%, rgba(140, 139, 160, 1) 100%);
+  background: linear-gradient(
+    11deg,
+    rgba(187, 150, 151, 1) 0%,
+    rgba(140, 139, 160, 1) 100%
+  );
 }
 
 /* Background of CPP project once clicked */
 .cppActive {
-  background: linear-gradient(25deg, rgba(104, 156, 189, 1) 0%, rgba(97, 126, 174, 1) 100%);
+  background: linear-gradient(
+    25deg,
+    rgba(104, 156, 189, 1) 0%,
+    rgba(97, 126, 174, 1) 100%
+  );
 }
 
 /* Background of animated face project once clicked */
 .faceActive {
-  background: linear-gradient(47deg, rgba(169, 145, 144, 1) 0%, rgba(94, 78, 91, 1) 76%);
+  background: linear-gradient(
+    47deg,
+    rgba(169, 145, 144, 1) 0%,
+    rgba(94, 78, 91, 1) 76%
+  );
 }
 
 /* Background of animated loop project once clicked */
 .loopActive {
-  background: linear-gradient(47deg, rgba(172, 168, 174, 1) 0%, rgba(112, 119, 137, 1) 76%);
+  background: linear-gradient(
+    47deg,
+    rgba(172, 168, 174, 1) 0%,
+    rgba(112, 119, 137, 1) 76%
+  );
 }
 
 /* Background of animated pulmonem project once clicked */
 .pulActive {
-  background: linear-gradient(47deg, rgba(57, 96, 118, 1) 0%, rgba(55, 69, 90, 1) 76%);
+  background: linear-gradient(
+    47deg,
+    rgba(57, 96, 118, 1) 0%,
+    rgba(55, 69, 90, 1) 76%
+  );
 }
 
 /* Background of animated sketchquisite once clicked */
 .sqActive {
-  background: linear-gradient(47deg, rgba(143, 159, 173, 1) 0%, rgba(79, 90, 106, 1) 76%);
+  background: linear-gradient(
+    47deg,
+    rgba(143, 159, 173, 1) 0%,
+    rgba(79, 90, 106, 1) 76%
+  );
 }
 
 /* Divs containing project content and visible when project mockup images are clicked */
-#maDiv, #cppDiv, #faceDiv, #loopDiv, #pulDiv, #sqDiv, #sqDiv {
+.showProjectContainer {
   flex: auto;
   width: 100%;
-  display: none;
+  height: 65%;
+  display: flex;
+  visibility: none;
   justify-content: space-around;
   margin-left: 1%;
-  align-items: flex-start;
-  margin-top: 2%;
-  align-self: center;
-  transform: translateY(-10vh);
 }
 
 /* Div with slightly adjusted property */
@@ -235,17 +263,18 @@ section {
 }
 
 /* Image container to show case project image once project is opened */
-#maImageContainer, #cppDiv #cppImageContainer, #faceDiv #faceImageContainer,
-#loopDiv #loopImageContainer, #sqDiv #sqImageContainer, #pulDiv #pulImageContainer {
-  width: 45%;
+#projectImageContainer {
+  width: 35%;
+  max-height: 70%;
+  display: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 /* Text describing the project itself, visible when project mockup is clicked*/
-#maDiv #maText, #cppDiv #cppText, #faceDiv #faceText, #loopDiv #loopText,
-#sqDiv #sqText, #pulDiv #pulText {
+#projectTextContainer {
+  font-size: 22px;
   width: 35%;
   margin-left: none;
   margin-right: 10%;
@@ -254,29 +283,30 @@ section {
 }
 
 /* Header of project once opened */
-#maDiv h1, #cppDiv h1, #faceDiv h1, #loopDiv h1, #sqDiv h1, #pulDiv h1 {
+.showProjectContainer h1 {
   margin-top: 0;
 }
 
 /* links within project */
-#maDiv a, #cppDiv a, #sqDiv a, #pul a {
+.showProjectContainer a {
   font-weight: bold;
 }
 
 /* Video properties for the Face animation project */
-#faceDiv video#faceVideo {
+.showProjectContainer video#faceVideo {
   width: 80%;
-  box-shadow: 10px 20px 40px #463D52;
+  box-shadow: 10px 20px 40px #463d52;
 }
 
 /* Video properties for the Loop animation project */
-#loopDiv video#loopVideo {
+.showProjectContainer video#loopVideo {
   width: 80%;
   box-shadow: 40px 30px 50px #546075;
 }
 
 /* Removing outline from Face animation project */
-#faceVideo:focus, #loopVideo:focus {
+#faceVideo:focus,
+#loopVideo:focus {
   outline: none;
 }
 
@@ -288,10 +318,9 @@ section {
 
 /* Container, containing project mockups and project divs */
 .projectsContainer {
-  /* margin-left: 5vw; */
   display: flex;
+  align-items: center;
   justify-content: center;
-  height: 65vh;
 }
 
 /* Project Mockup properties */
@@ -323,19 +352,19 @@ section {
 }
 
 /* Hover effect for each mock image */
-#ma img:hover, #cpp img:hover, #face img:hover, #loop img:hover, #pul img:hover, #sq img:hover {
+.projectMockup img:hover {
   filter: contrast(130%);
   width: 90%;
+  cursor: pointer;
 }
 
 /* Project mockups */
-#ma, #cpp, #face, #loop, #pul, #sq {
+.projectMockup {
   margin: 0;
   display: flex;
-  padding: 0.0%;
+  padding: 0%;
   transition: 2.5s;
   flex-wrap: wrap;
-  /* min-width: 10vw; */
   max-width: 30vh;
   align-self: flex-start;
   display: flex;
@@ -343,23 +372,22 @@ section {
 
 /* Div containing X to close a project once opened */
 #closeDiv {
-  margin-bottom: 1%;
+  margin-top: 2%;
   position: relative;
   width: 1%;
-  height: auto;
   font-size: 0.7vw;
   padding: 0.5%;
   text-align: center;
   border-radius: 50%;
   border-style: solid;
   border-width: thin;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   transition: 2s;
   background-color: none;
   color: rgba(255, 223, 248, 0.7);
-  font-weight: bold;
-  opacity: 0%;
-  align-self: center;
+  font-weight: 500;
+  display: block;
+  left: 50%;
 }
 
 /* Hover effect for close X */
@@ -380,20 +408,19 @@ img.icon {
 
 /* Icon hover effect */
 .icon:hover {
-  background-color: #FFDFF8;
-  text-shadow: 0 0 30px #545B7B;
-  box-shadow: 0 0 30px #FFDFF8;
+  background-color: #ffdff8;
+  text-shadow: 0 0 30px #545b7b;
+  box-shadow: 0 0 30px #ffdff8;
 }
 
 /* Glowing property */
 .glow {
-  color: #FFDFF8;
-  box-shadow: 0 0 30px #545B7B;
+  color: #ffdff8;
+  box-shadow: 0 0 30px #545b7b;
 }
 
 /* Media Queries */
-
-@media screen and (max-width: 2536px) {
+@media only screen and (max-width: 2536px) {
   #v0 {
     z-index: 0;
     align-self: center;
@@ -407,7 +434,7 @@ img.icon {
   }
 }
 
-@media screen and (max-width: 1500px) {
+@media only screen and (max-width: 1500px) {
   h1 {
     font-size: 24px;
   }
@@ -415,10 +442,9 @@ img.icon {
   p {
     font-size: 15px;
   }
-
 }
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   h1 {
     font-size: 18px;
   }
@@ -427,42 +453,65 @@ img.icon {
     font-size: 12px;
   }
 
-  #ma, #sq, #face, #loop, #cpp, #pul {
+  .projectMockup {
     width: 28vw;
+  }
+
+  #projectImageContainer {
+    width: 45%;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   h1 {
     font-size: 15px;
   }
 
   p {
-    font-size: 9px;
+    font-size: 15px;
   }
 
-  #ma, #sq, #face, #loop, #cpp, #pul {
+  .projectMockup {
     width: 35vw;
+  }
+
+    #projectImageContainer {
+    width: 55%;
   }
 }
 
-@media (orientation: portrait){
-  #maDiv, #cppDiv, #pulDiv, #faceDiv , #loopDiv, #sqDiv {
-    flex-direction: column;
+@media (min-width:500px) {
+
+    h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  #projectImageContainer {
+    width: 50%;
+  }
+
+ .projectMockup {
+  width: 30%;
+}
+  
+}
+
+@media (orientation: portrait) {
+  .showProjectContainer {
+    display: flex;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    transform: translateY(0vh);
     margin-left: 0;
     margin-top: 0;
   }
 
-  #maImageContainer, #sqImageContainer, #cppImageContainer, #pulImageContainer, #loopImageContainer, #faceImageContainer {
-    width: 65%;
-  }
-
-  #maDiv #maText, #sqDiv #sqText, #cppDiv #cppText, #pulDiv #pulText, #loopDiv #loopText, #sqDiv #sqText, #faceDiv #faceText {
+  #projectTextContainer {
     padding: 5%;
     margin-right: 0;
     width: 70%;
@@ -474,6 +523,52 @@ img.icon {
   }
 
   body {
-    background-color: #6E79A2;
+    background-color: #6e79a2;
+  }
+}
+
+
+@media (max-height: 1000px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (max-height: 780px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (max-height: 660px) {
+  h1 {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+}
+
+@media (max-height: 470px) {
+  h1 {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 11px;
+  }
+
+  #projectImageContainer {
+    width: 25%; 
   }
 }
